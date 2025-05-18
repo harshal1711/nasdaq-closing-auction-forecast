@@ -71,14 +71,11 @@ We engineered ~220 domain-informed features per record, including:
 |-------------|------------|----------------|
 | 0–290s      | CatBoost   | 6.11           |
 |             | RNN - GRU  | 6.32           |
-|-------------|------------|----------------|
 | 300–470s    | CatBoost   | 5.22           |
 |             | RNN - GRU  | 5.23           |
-|-------------|------------|----------------|
 | 480–540s    | CatBoost   | 4.98           |
 |             | RNN - GRU  | 4.99           |
 |             | LightGBM   | 5.00           |
-|-------------|------------|----------------|
 
 ![Model Performance](docs/Performance.png)
 
