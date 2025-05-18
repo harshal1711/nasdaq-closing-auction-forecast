@@ -77,7 +77,6 @@ We engineered ~220 domain-informed features per record, including:
 |             | RNN - GRU  | 4.99           |
 |             | LightGBM   | 5.00           |
 
-![Model Performance](docs/Performance.png)
 
 ---
 
