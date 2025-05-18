@@ -4,7 +4,7 @@ This project was developed as part of the [Optiver "Trading at the Close" Kaggle
 
 ---
 
-## 📊 Problem Overview
+## Problem Overview
 
 Every trading day, the **Nasdaq Closing Cross auction** determines the official closing price of securities. This price is critical for both retail and institutional trading decisions. Market makers like **Optiver** combine order book and auction data to determine supply-demand imbalances and pricing.
 
@@ -15,9 +15,9 @@ Every trading day, the **Nasdaq Closing Cross auction** determines the official 
 
 ---
 
-## 🧠 Modeling Strategy
+## Modeling Strategy
 
-### ⏱️ Time-Aware Windowing
+###  Time-Aware Windowing
 
 The dataset was split into 3 **non-overlapping time windows**:
 - **Window 1**: 0–290 seconds
@@ -28,7 +28,7 @@ Each window simulates a separate short-term market condition and allows for focu
 
 ---
 
-### 🧪 Cross-Validation Approach
+### Cross-Validation Approach
 
 We used **time-based cross-validation**, ensuring that:
 - **Training data precedes validation data** chronologically (no random shuffling)
@@ -37,7 +37,7 @@ We used **time-based cross-validation**, ensuring that:
 
 ---
 
-### ⚙️ Models Evaluated
+### Models Evaluated
 
 Across all windows, we compared the performance of:
 - **CatBoost**
@@ -51,7 +51,7 @@ Models were tuned using grid/randomized search over key hyperparameters like dep
 
 ---
 
-### 🧬 Feature Engineering
+### Feature Engineering
 
 We engineered ~220 domain-informed features per record, including:
 
@@ -65,7 +65,7 @@ We engineered ~220 domain-informed features per record, including:
 
 ---
 
-### 📈 Model Performance Summary
+### Model Performance Summary
 
 | Time Window | Model      | Validation MAE |
 |-------------|------------|----------------|
@@ -80,7 +80,7 @@ We engineered ~220 domain-informed features per record, including:
 
 ---
 
-### 🔄 Additional Exploration
+### Additional Exploration
 
 - Implemented a **Transformer architecture**
 - Models showed marginally better results during the final window (most volatile and data-rich)
